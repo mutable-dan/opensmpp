@@ -290,6 +290,7 @@ public class SimulatorPDUProcessor extends PDUProcessor {
 	private int checkIdentity(BindRequest request) {
 		int commandStatus = Data.ESME_ROK;
 		Record user = users.find(SYSTEM_ID_ATTR, request.getSystemId());
+		debug.write( "authenticate user:" + request.getSystemId() + ", pwd:" + user.getValue( PASSWORD_ATTR ) );
 		if (user != null) {
 			String password = user.getValue(PASSWORD_ATTR);
 			if (password != null) {

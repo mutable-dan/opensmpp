@@ -18,6 +18,9 @@
 # and it's value, i.e. "name=peter" and "name= peter" define two different users,
 # "peter" and " peter".
 
+name=piggy
+password=1234
+timeoout=unliimited
 
 # Pavel can bound for unlimited time as any type
 name=pavel
