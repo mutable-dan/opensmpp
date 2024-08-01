@@ -424,11 +424,11 @@ public class SMPPTest {
 			SubmitSMResp response;
 
 			// input values
+			shortMessage = getParam("The short message", shortMessage);
 			serviceType = getParam("Service type", serviceType);
 			sourceAddress = getAddress("Source", sourceAddress);
 			destAddress = getAddress("Destination", destAddress);
 			replaceIfPresentFlag = getParam("Replace if present flag", replaceIfPresentFlag);
-			shortMessage = getParam("The short message", shortMessage);
 			scheduleDeliveryTime = getParam("Schedule delivery time", scheduleDeliveryTime);
 			validityPeriod = getParam("Validity period", validityPeriod);
 			esmClass = getParam("Esm class", esmClass);
@@ -439,6 +439,7 @@ public class SMPPTest {
 			smDefaultMsgId = getParam("Sm default msg id", smDefaultMsgId);
 
 			// set values
+
 			request.setServiceType(serviceType);
 			request.setSourceAddr(sourceAddress);
 			request.setDestAddr(destAddress);
